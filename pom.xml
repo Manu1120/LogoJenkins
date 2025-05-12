@@ -2,12 +2,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.example</groupId>
-  <artifactId>seleniuminmaven</artifactId>
+  <groupId>org.example</groupId>
+  <artifactId>SecondMaven</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>seleniuminmaven</name>
+  <name>SecondMaven</name>
   <url>http://maven.apache.org</url>
 
   <properties>
@@ -16,24 +16,17 @@
 
   <dependencies>
     <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
-
-    <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-java</artifactId>
       <version>4.29.0</version>
     </dependency>
-
     <dependency>
       <groupId>org.testng</groupId>
       <artifactId>testng</artifactId>
       <version>7.11.0</version>
       <scope>test</scope>
     </dependency>
+
   </dependencies>
   <build>
     <plugins>
@@ -48,8 +41,7 @@
               <goal>copy-resources</goal>
             </goals>
             <configuration>
-              <outputDirectory>${project.basedir}/docs</outputDirectory>
-              <!-- Deploy to /docs folder -->
+              <outputDirectory>${project.basedir}/docs</outputDirectory> <!-- Deploy to /docs folder -->
               <resources>
                 <resource>
                   <directory>src/main/resources</directory>
@@ -64,4 +56,5 @@
       </plugin>
     </plugins>
   </build>
+
 </project>
